@@ -1,0 +1,26 @@
+# Async HTTP client
+aiohttp>=3.8.0
+
+# Redis client for caching
+redis>=4.0.0
+
+# Rate limiting
+ratelimit>=2.2.0
+
+# Data manipulation
+pandas>=1.5.0
+
+# JSON handling (built-in, but listing for clarity)
+# json - built-in module
+
+# Logging (built-in)
+# logging - built-in module
+
+# Type hints (built-in in Python 3.9+, but for older versions)
+typing-extensions>=4.0.0
+
+# Date/time handling (built-in)
+# datetime - built-in module
+
+# Async support (built-in in Python 3.7+)
+# asyncio - built-in module

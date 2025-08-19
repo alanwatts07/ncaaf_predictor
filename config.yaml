@@ -1,0 +1,3 @@
+run_ingest: true
+run_training: false
+run_sim2025: false
