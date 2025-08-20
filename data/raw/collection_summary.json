@@ -1,0 +1,42 @@
+{
+  "collection_timestamp": "2025-08-19T20:10:24.611044",
+  "seasons_collected": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "summary_by_season": {
+    "2020": {
+      "teams_count": 136,
+      "games_count": 1125,
+      "game_stats_count": 0,
+      "betting_lines_count": 0
+    },
+    "2021": {
+      "teams_count": 136,
+      "games_count": 2454,
+      "game_stats_count": 0,
+      "betting_lines_count": 0
+    },
+    "2022": {
+      "teams_count": 136,
+      "games_count": 3705,
+      "game_stats_count": 0,
+      "betting_lines_count": 0
+    },
+    "2023": {
+      "teams_count": 136,
+      "games_count": 3734,
+      "game_stats_count": 0,
+      "betting_lines_count": 0
+    },
+    "2024": {
+      "teams_count": 136,
+      "games_count": 3801,
+      "game_stats_count": 0,
+      "betting_lines_count": 692
+    }
+  }
+}
