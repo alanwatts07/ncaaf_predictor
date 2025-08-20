@@ -12,7 +12,7 @@ def get_config() -> Dict:
     config = {
         # API Keys (you'll need to get these from the respective services)
         'cfbd_api_key': os.getenv('CFBD_API_KEY', '8O0ClYn1Aw1thycgcxSKbemsHWvNSZMYhoyEkR4KZAHwrggwBYbDv6gXPKqbFcZs'),
-        'odds_api_key': os.getenv('ODDS_API_KEY', 'your_odds_api_key_here'),
+        'odds_api_key': os.getenv('ODDS_API_KEY', '883a632f23d80b2654519cd6edefa1e5'),
         
         # Redis Configuration
         'redis_host': os.getenv('REDIS_HOST', 'localhost'),

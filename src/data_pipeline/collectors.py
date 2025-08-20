@@ -99,7 +99,216 @@ class NCAADataCollector:
         except Exception as e:
             self.logger.error(f"Unexpected error for URL {url}: {e}")
             return None
-    
+    # Add these methods to your NCAADataCollector class:
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_player_season_stats(self, season: int, category: str = None) -> List[Dict]:
+        """
+        Collect detailed player statistics for a season.
+        
+        Args:
+            season (int): The season year
+            category (str): Stats category ('passing', 'rushing', 'receiving', 'defensive', etc.)
+        
+        Returns:
+            List[Dict]: List of player statistics
+        """
+        url = f"{self.base_endpoints['cfbd']}/stats/player/season"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        if category:
+            params['category'] = category
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected {len(data)} player stats for {season}")
+                return data
+            else:
+                self.logger.error(f"Failed to collect player stats for {season}")
+                return []
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_team_season_stats(self, season: int) -> List[Dict]:
+        """
+        Collect comprehensive team statistics for a season.
+        
+        Args:
+            season (int): The season year
+        
+        Returns:
+            List[Dict]: List of team season statistics
+        """
+        url = f"{self.base_endpoints['cfbd']}/stats/season"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected team season stats for {len(data)} teams in {season}")
+                return data
+            else:
+                self.logger.error(f"Failed to collect team season stats for {season}")
+                return []
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_team_advanced_season_stats(self, season: int) -> List[Dict]:
+        """
+        Collect advanced team statistics (efficiency, explosiveness, etc.).
+        
+        Args:
+            season (int): The season year
+        
+        Returns:
+            List[Dict]: List of advanced team statistics
+        """
+        url = f"{self.base_endpoints['cfbd']}/stats/season/advanced"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected advanced team stats for {len(data)} teams in {season}")
+                return data
+            else:
+                self.logger.error(f"Failed to collect advanced team stats for {season}")
+                return []
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_team_talent_ratings(self, season: int) -> List[Dict]:
+        """
+        Collect team talent composite ratings.
+        
+        Args:
+            season (int): The season year
+        
+        Returns:
+            List[Dict]: List of team talent ratings
+        """
+        url = f"{self.base_endpoints['cfbd']}/talent"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected talent ratings for {len(data)} teams in {season}")
+                return data
+            else:
+                self.logger.error(f"Failed to collect talent ratings for {season}")
+                return []
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_recruiting_data(self, season: int) -> List[Dict]:
+        """
+        Collect recruiting class data.
+        
+        Args:
+            season (int): The recruiting class year
+        
+        Returns:
+            List[Dict]: List of recruiting data
+        """
+        url = f"{self.base_endpoints['cfbd']}/recruiting/teams"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected recruiting data for {len(data)} teams in {season}")
+                return data
+            else:
+                self.logger.error(f"Failed to collect recruiting data for {season}")
+                return []
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_player_game_stats(self, season: int, week: int = None, team: str = None) -> List[Dict]:
+        """
+        Collect individual player game statistics.
+        
+        Args:
+            season (int): The season year
+            week (int, optional): Specific week
+            team (str, optional): Specific team
+        
+        Returns:
+            List[Dict]: List of player game statistics
+        """
+        url = f"{self.base_endpoints['cfbd']}/games/players"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        if week:
+            params['week'] = week
+        if team:
+            params['team'] = team
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected player game stats: {len(data)} games")
+                return data
+            else:
+                self.logger.error(f"Failed to collect player game stats")
+                return []
+
+    @sleep_and_retry
+    @limits(calls=50, period=60)
+    async def collect_team_game_stats(self, season: int, week: int = None) -> List[Dict]:
+        """
+        Collect team game statistics (detailed box scores).
+        
+        Args:
+            season (int): The season year
+            week (int, optional): Specific week
+        
+        Returns:
+            List[Dict]: List of team game statistics
+        """
+        url = f"{self.base_endpoints['cfbd']}/games/teams"
+        headers = {
+            'Authorization': f"Bearer {self.config.get('cfbd_api_key', '')}"
+        }
+        params = {'year': season}
+        if week:
+            params['week'] = week
+        
+        async with aiohttp.ClientSession() as session:
+            data = await self._fetch_data(session, url, headers=headers, params=params)
+            
+            if data:
+                self.logger.info(f"Successfully collected team game stats: {len(data)} games")
+                return data
+            else:
+                self.logger.error(f"Failed to collect team game stats")
+                return []
+                
     @sleep_and_retry
     @limits(calls=50, period=60)
     async def collect_teams_data(self) -> List[Dict]:
