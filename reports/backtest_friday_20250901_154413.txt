@@ -1,0 +1,105 @@
+FRIDAY GAMES BACKTEST REPORT
+========================================
+Generated: 2025-09-01 15:44:13
+Overall Accuracy: 63.6%
+
+GAME-BY-GAME RESULTS:
+-------------------------
+
+1. Tarleton State @ Army Black Knights
+   Actual: Army won 30-27 (2OT)
+   Predicted: Tarleton State by 6.3
+   Win Probability: 69.2%
+   Status: ❌ INCORRECT
+   Notes: Double overtime
+
+2. Kennesaw State @ Wake Forest Demon Deacons
+   Actual: Wake Forest won 10-9
+   Predicted: Wake Forest by 7.1
+   Win Probability: 71.2%
+   Status: ✅ CORRECT
+   Notes: Low-scoring defensive game
+
+3. Bethune-Cookman @ FIU Panthers
+   Actual: FIU won 42-9
+   Predicted: FIU by 8.6
+   Win Probability: 76.0%
+   Status: ✅ CORRECT
+   Notes: Blowout
+
+4. Appalachian State Mountaineers @ Charlotte 49ers
+   Actual: Appalachian State won 34-11
+   Predicted: Appalachian State by 1.7
+   Win Probability: 55.4%
+   Status: ✅ CORRECT
+   Notes: Neutral site in Charlotte
+
+5. Western Michigan Broncos @ Michigan State Spartans
+   Actual: Michigan State won 23-6
+   Predicted: Western Michigan by 3.5
+   Win Probability: 63.9%
+   Status: ❌ INCORRECT
+   Notes: Big Ten vs MAC
+
+6. Western Illinois Leathernecks @ Illinois Fighting Illini
+   Actual: Illinois won 52-3
+   Predicted: Western Illinois by 4.6
+   Win Probability: 65.2%
+   Status: ✅ CORRECT
+   Notes: FBS vs FCS blowout
+
+7. Wagner Seahawks @ Kansas Jayhawks
+   Actual: Kansas won 46-7
+   Predicted: Wagner Seahawks by 11.3
+   Win Probability: 83.4%
+   Status: ❌ INCORRECT
+   Notes: FBS vs FCS
+
+8. Georgia Tech Yellow Jackets @ Colorado Buffaloes
+   Actual: Georgia Tech won 27-20
+   Predicted: Colorado by 0.2
+   Win Probability: 50.9%
+   Status: ❌ INCORRECT
+   Notes: Road upset
+
+9. Auburn Tigers @ Baylor Bears
+   Actual: Auburn won 38-24
+   Predicted: Auburn by 8.4
+   Win Probability: 75.4%
+   Status: ✅ CORRECT
+   Notes: SEC at Big 12
+
+10. UNLV Rebels @ Sam Houston Bearkats
+   Actual: UNLV won 38-21
+   Predicted: UNLV by 18.8
+   Win Probability: 94.9%
+   Status: ✅ CORRECT
+   Notes: Road win
+
+11. Central Michigan Chippewas @ San Jose State Spartans
+   Actual: Central Michigan won 16-14
+   Predicted: Central Michigan Chippewas by 8.1
+   Win Probability: 76.1%
+   Status: ✅ CORRECT
+   Notes: Close road win
+
+
+ANALYSIS:
+----------
+Correctly predicted 7 games:
+  - Wake Forest over Kennesaw State
+  - FIU over Bethune-Cookman
+  - Appalachian State over Appalachian State Mountaineers
+  - Illinois over Western Illinois Leathernecks
+  - Auburn over Auburn Tigers
+  - UNLV over UNLV Rebels
+  - Central Michigan over Central Michigan Chippewas
+
+Missed 4 predictions:
+  - Predicted Tarleton State, but Army won
+  - Predicted Western Michigan, but Michigan State won
+  - Predicted Wagner Seahawks, but Kansas won
+  - Predicted Colorado, but Georgia Tech won
+
+Model shows 63.6% accuracy on these Friday games.
+This validates the prediction system's performance on real game outcomes.

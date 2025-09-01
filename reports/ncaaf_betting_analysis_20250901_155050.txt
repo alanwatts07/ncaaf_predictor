@@ -1,0 +1,44 @@
+COLLEGE FOOTBALL BETTING ANALYSIS
+FRIDAY, SEPTEMBER 5, 2025 GAMES
+==================================================
+Generated: 2025-09-01 15:50:50
+
+GAMES ANALYZED:
+--------------------
+  Eastern Washington @ Boise State
+    Predicted Spread: Boise State +15.9
+    Predicted Total: 79.8
+    Boise State Win Probability: 90.3%
+  Western Illinois @ Northwestern
+    Predicted Spread: Northwestern +14.8
+    Predicted Total: 79.7
+    Northwestern Win Probability: 89.1%
+  James Madison @ Louisville
+    Predicted Spread: Louisville +10.9
+    Predicted Total: 75.3
+    Louisville Win Probability: 81.2%
+  Northern Illinois @ Maryland
+    Predicted Spread: Maryland +7.3
+    Predicted Total: 71.7
+    Maryland Win Probability: 72.7%
+
+HIGH CONFIDENCE OPPORTUNITIES:
+------------------------------
+Boise State vs Eastern Washington
+  Bet Type: moneyline
+  Prediction: 0.903
+  Confidence: 80.6%
+  Recommendation: BET
+
+ANALYSIS OPPORTUNITIES:
+-------------------------
+Northwestern vs Western Illinois
+  Type: moneyline | Confidence: 78.2%
+  Win Prob: 89.1%
+
+Louisville vs James Madison
+  Type: moneyline | Confidence: 62.4%
+  Win Prob: 81.2%
+
+DISCLAIMER: This is for educational purposes only.
+Always do your own research before making any wagers.

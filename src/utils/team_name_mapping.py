@@ -104,7 +104,7 @@ def create_team_name_mapping():
         'Wyoming Cowboys': 'Wyoming',
         'New Mexico Lobos': 'New Mexico',
         'Hawaii Rainbow Warriors': 'Hawaii',
-        'San Jose State Spartans': 'San Jose State',
+        'San Jose State Spartans': 'San José State',
         
         # More teams
         'Appalachian State Mountaineers': 'Appalachian State',
@@ -121,6 +121,19 @@ def create_team_name_mapping():
         'Northwestern Wildcats': 'Northwestern',
         'Eastern Washington Eagles': 'Eastern Washington',
         'Boise State Broncos': 'Boise State',
+        
+        # Fix mappings for Friday backtest teams
+        'FIU Panthers': 'Florida International',
+        'Appalachian State Mountaineers': 'App State',
+        'Charlotte 49ers': 'Charlotte',
+        'Central Michigan Chippewas': 'Central Michigan',
+        'Sam Houston Bearkats': 'Sam Houston',
+        'Wagner Seahawks': 'Wagner Seahawks',  # FCS - will still use fallback
+        'Kennesaw State': 'Kennesaw State',  # Already matches
+        'Wake Forest Demon Deacons': 'Wake Forest',
+        'Western Michigan Broncos': 'Western Michigan',
+        'Tarleton State': 'Tarleton State',  # FCS - will still use fallback
+        'Bethune-Cookman': 'Bethune-Cookman',  # FCS - will still use fallback
         
         # Additional Group of Five and FCS teams
         'Delaware State Hornets': 'Delaware State',

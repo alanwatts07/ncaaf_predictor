@@ -1,0 +1,88 @@
+COLLEGE FOOTBALL BETTING ANALYSIS
+FRIDAY, SEPTEMBER 5, 2025 GAMES
+==================================================
+Generated: 2025-09-01 15:59:20
+
+GAMES ANALYZED:
+--------------------
+  San José State @ Texas
+    Predicted Spread: Texas +28.2
+    Predicted Total: 64.4
+    Texas Win Probability: 99.7%
+  Grambling State @ Ohio State
+    Predicted Spread: Ohio State +33.4
+    Predicted Total: 70.6
+    Ohio State Win Probability: 99.7%
+  Oklahoma State @ Oregon
+    Predicted Spread: Oregon +30.7
+    Predicted Total: 74.0
+    Oregon Win Probability: 99.4%
+  Florida International @ Penn State
+    Predicted Spread: Penn State +27.8
+    Predicted Total: 64.3
+    Penn State Win Probability: 99.2%
+  Austin Peay Governors @ Georgia
+    Predicted Spread: Georgia +26.6
+    Predicted Total: 65.3
+    Georgia Win Probability: 98.3%
+  Louisiana Tech @ LSU
+    Predicted Spread: LSU +18.4
+    Predicted Total: 71.4
+    LSU Win Probability: 94.6%
+  Arizona State @ Mississippi State
+    Predicted Spread: Mississippi State -18.6
+    Predicted Total: 74.5
+    Mississippi State Win Probability: 5.8%
+  Troy @ Clemson
+    Predicted Spread: Clemson +17.4
+    Predicted Total: 63.4
+    Clemson Win Probability: 92.5%
+  UL Monroe Warhawks @ Alabama
+    Predicted Spread: Alabama +11.6
+    Predicted Total: 63.6
+    Alabama Win Probability: 83.4%
+  Iowa @ Iowa State
+    Predicted Spread: Iowa State -9.0
+    Predicted Total: 61.8
+    Iowa State Win Probability: 22.6%
+
+HIGH CONFIDENCE OPPORTUNITIES:
+------------------------------
+Texas vs San José State
+  Bet Type: moneyline
+  Prediction: 0.997
+  Confidence: 99.4%
+  Recommendation: BET
+
+Ohio State vs Grambling State
+  Bet Type: moneyline
+  Prediction: 0.997
+  Confidence: 99.4%
+  Recommendation: BET
+
+Oregon vs Oklahoma State
+  Bet Type: moneyline
+  Prediction: 0.994
+  Confidence: 98.8%
+  Recommendation: BET
+
+Penn State vs Florida International
+  Bet Type: moneyline
+  Prediction: 0.992
+  Confidence: 98.4%
+  Recommendation: BET
+
+Georgia vs Austin Peay Governors
+  Bet Type: moneyline
+  Prediction: 0.983
+  Confidence: 96.6%
+  Recommendation: BET
+
+ANALYSIS OPPORTUNITIES:
+-------------------------
+Alabama vs UL Monroe Warhawks
+  Type: moneyline | Confidence: 66.8%
+  Win Prob: 83.4%
+
+DISCLAIMER: This is for educational purposes only.
+Always do your own research before making any wagers.

@@ -76,46 +76,113 @@ class NCAAFPredictionSystem:
     
     def get_sample_upcoming_games(self) -> list:
         """
-        Get actual upcoming games for Friday, September 5, 2025.
+        Get next week's marquee matchups and notable games.
         
-        These are the real games scheduled for this Friday evening.
+        These are the major games scheduled for next week.
         """
         
-        # REAL Friday, September 5, 2025 games
+        # Next week's marquee matchups and notable games
         upcoming_games = [
+            # Marquee Matchups
             {
-                'home_team': 'Louisville Cardinals',
-                'away_team': 'James Madison Dukes', 
-                'date': '2025-09-05',
+                'home_team': 'Oklahoma Sooners',
+                'away_team': 'Michigan Wolverines', 
+                'date': '2025-09-07',
+                'time': '7:00 PM CT',
+                'tv': 'ABC',
+                'week': 2,
+                'ranking': {'home': 18, 'away': 14}
+            },
+            {
+                'home_team': 'Iowa State Cyclones',
+                'away_team': 'Iowa Hawkeyes',
+                'date': '2025-09-07', 
+                'time': '12:00 PM ET',
+                'tv': 'FOX',
+                'week': 2,
+                'ranking': {'home': 22, 'away': None}
+            },
+            {
+                'home_team': 'Oregon Ducks',
+                'away_team': 'Oklahoma State Cowboys',
+                'date': '2025-09-07',
+                'time': '3:00 PM ET', 
+                'tv': 'CBS',
+                'week': 2,
+                'ranking': {'home': 7, 'away': None}
+            },
+            {
+                'home_team': 'Mississippi State Bulldogs',
+                'away_team': 'Arizona State Sun Devils',
+                'date': '2025-09-07',
                 'time': '7:00 PM ET',
+                'tv': 'ESPN',
                 'week': 2,
-                'tv': 'TBD'
+                'ranking': {'home': None, 'away': 11}
+            },
+            # Other Notable Games - Ranked teams vs weaker opponents
+            {
+                'home_team': 'Texas Longhorns',
+                'away_team': 'San José State Spartans',
+                'date': '2025-09-07',
+                'time': '12:00 PM CT',
+                'tv': 'ESPN',
+                'week': 2,
+                'ranking': {'home': 1, 'away': None}
             },
             {
-                'home_team': 'Maryland Terrapins',
-                'away_team': 'Northern Illinois Huskies',
-                'date': '2025-09-05', 
+                'home_team': 'Penn State Nittany Lions',
+                'away_team': 'Florida International Panthers',
+                'date': '2025-09-07',
+                'time': '12:00 PM ET',
+                'tv': 'BTN', 
+                'week': 2,
+                'ranking': {'home': 2, 'away': None}
+            },
+            {
+                'home_team': 'Ohio State Buckeyes',
+                'away_team': 'Grambling State Tigers',
+                'date': '2025-09-07',
+                'time': '3:00 PM ET',
+                'tv': 'BTN',
+                'week': 2,
+                'ranking': {'home': 3, 'away': None}
+            },
+            {
+                'home_team': 'Clemson Tigers',
+                'away_team': 'Troy Trojans',
+                'date': '2025-09-07',
+                'time': '3:00 PM ET',
+                'tv': 'TBD',
+                'week': 2,
+                'ranking': {'home': 4, 'away': None}
+            },
+            {
+                'home_team': 'Georgia Bulldogs',
+                'away_team': 'Austin Peay Governors',
+                'date': '2025-09-07',
+                'time': '3:00 PM ET',
+                'tv': 'TBD',
+                'week': 2,
+                'ranking': {'home': 5, 'away': None}
+            },
+            {
+                'home_team': 'Alabama Crimson Tide',
+                'away_team': 'UL Monroe Warhawks',
+                'date': '2025-09-07',
                 'time': '7:00 PM ET',
+                'tv': 'TBD',
                 'week': 2,
-                'conference': 'Big Ten',
-                'tv': 'TBD'
+                'ranking': {'home': 8, 'away': None}
             },
             {
-                'home_team': 'Northwestern Wildcats',
-                'away_team': 'Western Illinois Leathernecks',
-                'date': '2025-09-05',
-                'time': '7:30 PM ET', 
+                'home_team': 'LSU Tigers',
+                'away_team': 'Louisiana Tech Bulldogs',
+                'date': '2025-09-07',
+                'time': '7:00 PM ET',
+                'tv': 'TBD',
                 'week': 2,
-                'conference': 'Big Ten',
-                'tv': 'TBD'
-            },
-            {
-                'home_team': 'Boise State Broncos',
-                'away_team': 'Eastern Washington Eagles',
-                'date': '2025-09-05',
-                'time': '9:00 PM ET',
-                'week': 2,
-                'tv': 'TBD'
+                'ranking': {'home': 9, 'away': None}
             }
         ]
         
