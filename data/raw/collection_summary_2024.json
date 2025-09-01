@@ -1,0 +1,13 @@
+{
+  "year": 2024,
+  "collection_status": "completed",
+  "datasets": {
+    "sp_plus_ratings": 135,
+    "opponent_adjusted_stats": 136,
+    "advanced_team_stats": 136,
+    "ppa_team_stats": 134,
+    "fpi_ratings": 134,
+    "recruiting_rankings": 194,
+    "talent_rankings": 134
+  }
+}

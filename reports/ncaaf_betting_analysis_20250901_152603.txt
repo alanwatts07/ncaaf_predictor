@@ -1,0 +1,44 @@
+COLLEGE FOOTBALL BETTING ANALYSIS
+==================================================
+Generated: 2025-09-01 15:26:03
+
+HIGH CONFIDENCE OPPORTUNITIES:
+------------------------------
+Texas vs Texas A&M
+  Bet Type: moneyline
+  Prediction: 0.959
+  Confidence: 91.8%
+  Recommendation: BET
+
+Alabama vs Auburn
+  Bet Type: moneyline
+  Prediction: 0.954
+  Confidence: 90.8%
+  Recommendation: BET
+
+USC vs Notre Dame
+  Bet Type: moneyline
+  Prediction: 0.054
+  Confidence: 89.2%
+  Recommendation: BET
+
+Georgia vs Georgia Tech
+  Bet Type: moneyline
+  Prediction: 0.93
+  Confidence: 86.0%
+  Recommendation: BET
+
+Florida vs Florida State
+  Bet Type: moneyline
+  Prediction: 0.926
+  Confidence: 85.2%
+  Recommendation: BET
+
+ANALYSIS OPPORTUNITIES:
+-------------------------
+Georgia vs Texas
+  Type: moneyline | Confidence: 70.2%
+  Win Prob: 14.9%
+
+DISCLAIMER: This is for educational purposes only.
+Always do your own research before making any wagers.

@@ -1,0 +1,32 @@
+COLLEGE FOOTBALL BETTING ANALYSIS
+==================================================
+Generated: 2025-09-01 15:22:20
+
+HIGH CONFIDENCE OPPORTUNITIES:
+------------------------------
+Oregon vs Washington
+  Bet Type: moneyline
+  Prediction: 1.0
+  Confidence: 100.0%
+  Recommendation: BET
+
+Florida State vs Florida
+  Bet Type: moneyline
+  Prediction: 0.015
+  Confidence: 97.0%
+  Recommendation: BET
+
+Texas vs Texas A&M
+  Bet Type: moneyline
+  Prediction: 0.957
+  Confidence: 91.4%
+  Recommendation: BET
+
+Notre Dame vs USC
+  Bet Type: moneyline
+  Prediction: 0.942
+  Confidence: 88.4%
+  Recommendation: BET
+
+DISCLAIMER: This is for educational purposes only.
+Always do your own research before making any wagers.

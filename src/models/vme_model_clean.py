@@ -1,4 +1,4 @@
-# src/models/vme_model.py
+# src/models/vme_model_clean.py
 import numpy as np
 import pandas as pd
 import torch
@@ -9,7 +9,6 @@ from sklearn.preprocessing import StandardScaler
 from typing import Tuple, Dict, List, Optional
 import logging
 import json
-import matplotlib.pyplot as plt
 from pathlib import Path
 
 logging.basicConfig(level=logging.INFO)
@@ -132,13 +131,6 @@ class TeamEmbeddingTrainer:
               beta: float = 1.0) -> Dict[str, List[float]]:
         """
         Train the team embedding model.
-        
-        Args:
-            train_data: Normalized team feature data
-            epochs: Number of training epochs
-            batch_size: Batch size for training
-            learning_rate: Learning rate for optimizer
-            beta: Beta parameter for beta-VAE
         """
         
         # Convert to PyTorch tensors
@@ -182,7 +174,7 @@ class TeamEmbeddingTrainer:
             self.history['recon_loss'].append(avg_recon)
             self.history['kld_loss'].append(avg_kld)
             
-            if epoch % 10 == 0:
+            if epoch % 20 == 0:
                 logger.info(f'Epoch {epoch}: Loss={avg_loss:.4f}, Recon={avg_recon:.4f}, KLD={avg_kld:.4f}')
         
         logger.info("Training completed!")
@@ -206,27 +198,12 @@ class TeamEmbeddingTrainer:
             'history': self.history
         }, filepath)
         logger.info(f"Model saved to {filepath}")
-    
-    def load_model(self, filepath: str):
-        """Load a trained model."""
-        checkpoint = torch.load(filepath, map_location=self.device)
-        self.model.load_state_dict(checkpoint['model_state_dict'])
-        self.history = checkpoint.get('history', self.history)
-        logger.info(f"Model loaded from {filepath}")
 
 def create_and_train_embedding_model(feature_data: np.ndarray, 
                                    team_info: pd.DataFrame,
-                                   save_path: str = "models/team_embeddings.pth") -> Tuple[VariationalTeamEmbedding, np.ndarray]:
+                                   save_path: str = "data/models/team_embeddings.pth") -> Tuple[VariationalTeamEmbedding, np.ndarray]:
     """
     Create and train a team embedding model.
-    
-    Args:
-        feature_data: Normalized team feature matrix
-        team_info: DataFrame with team names and conferences
-        save_path: Path to save the trained model
-    
-    Returns:
-        Trained model and team embeddings
     """
     
     logger.info("Creating and training team embedding model...")
@@ -263,16 +240,15 @@ def create_and_train_embedding_model(feature_data: np.ndarray,
     embedding_data = {
         'teams': team_info.to_dict('records'),
         'embeddings': team_embeddings.tolist(),
-        'embedding_dim': embedding_dim,
-        'feature_names': None  # Will be set by caller
+        'embedding_dim': embedding_dim
     }
     
     embedding_path = save_path.replace('.pth', '_embeddings.json')
     with open(embedding_path, 'w') as f:
         json.dump(embedding_data, f, indent=2)
     
-    logger.info(f" Team embeddings trained and saved!")
-    logger.info(f"=Ê Embedding shape: {team_embeddings.shape}")
+    logger.info("Team embeddings trained and saved!")
+    logger.info(f"Embedding shape: {team_embeddings.shape}")
     
     return model, team_embeddings
 
@@ -282,15 +258,16 @@ def main():
     print("=" * 35)
     
     # Load processed features
-    print("=Ê Loading processed team features...")
+    print("Loading processed team features...")
     try:
         # Load feature matrix
         with open('data/raw/team_features_2024.json', 'r') as f:
             team_features_df = pd.read_json(f)
         
-        print(f" Loaded features for {len(team_features_df)} teams")
+        print(f"Loaded features for {len(team_features_df)} teams")
         
         # Prepare data for embedding model
+        import sys
         sys.path.append('src')
         from features.build_features import FootballFeatureEngineer
         
@@ -299,10 +276,10 @@ def main():
         # Get embedding features
         X_normalized, feature_names, team_info = engineer.prepare_embedding_features(team_features_df)
         
-        print(f"=Ë Using {len(feature_names)} features: {feature_names}")
+        print(f"Using {len(feature_names)} features for embeddings")
         
         # Train embedding model
-        print("> Training team embedding model...")
+        print("Training team embedding model...")
         model, embeddings = create_and_train_embedding_model(
             X_normalized, 
             team_info, 
@@ -310,18 +287,18 @@ def main():
         )
         
         # Display some results
-        print("\n<¯ Sample Team Embeddings:")
+        print("\nSample Team Embeddings:")
         for i in range(min(5, len(team_info))):
             team_name = team_info.iloc[i]['team']
             embedding_preview = embeddings[i][:5]
             print(f"  {team_name}: [{', '.join(f'{x:.3f}' for x in embedding_preview)}, ...]")
         
-        print("\n Step 3 Complete! Ready for Step 4: Prediction Head Model!")
+        print("\nStep 3 Complete! Ready for Step 4: Prediction Head Model!")
         
         return model, embeddings, team_info, feature_names
         
     except Exception as e:
-        print(f"L Error in embedding training: {e}")
+        print(f"Error in embedding training: {e}")
         logger.error(f"Embedding training error: {e}")
         return None
 
